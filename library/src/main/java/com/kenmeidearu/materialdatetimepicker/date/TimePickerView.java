@@ -19,7 +19,6 @@ package com.kenmeidearu.materialdatetimepicker.date;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.drawable.StateListDrawable;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.accessibility.AccessibilityEvent;
@@ -247,7 +246,7 @@ public class TimePickerView extends ListView implements OnItemClickListener, OnD
                     break;
             }
 
-        Log.e("isi dari atas"," sisinya: "+rubah);
+        //Log.e("isi dari atas"," sisinya: "+rubah);
         postSetSelectionCentered(rubah);
     }
 
