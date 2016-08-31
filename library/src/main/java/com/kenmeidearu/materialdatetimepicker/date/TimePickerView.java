@@ -34,6 +34,7 @@ import com.kenmeidearu.materialdatetimepicker.date.DatePickerDialog.OnDateChange
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Displays a selectable list of years.
@@ -77,27 +78,27 @@ public class TimePickerView extends ListView implements OnItemClickListener, OnD
     private void init(Context context) {
         ArrayList<String> datatime = new ArrayList<>();
         if(!AMPM){
-            switch (typeControl.toUpperCase()){
+            switch (typeControl.toUpperCase(Locale.getDefault())){
                 case "HOUR":
                     for (int a = 1; a <= 12; a++) {
-                        datatime.add(String.format("%d", a));
+                        datatime.add(String.format(Locale.getDefault(),"%d", a));
                     }
                     break;
                 case "MINUTE":
                     for (int a = 0; a <= 59; a++) {
                         if(a<10){
-                            datatime.add("0"+String.format("%d", a));
+                            datatime.add("0"+String.format(Locale.getDefault(),"%d", a));
                         }else{
-                            datatime.add(String.format("%d", a));
+                            datatime.add(String.format(Locale.getDefault(),"%d", a));
                         }
                     }
                     break;
                 case "SECOND":
                     for (int a = 0; a <= 59; a++) {
                         if(a<10){
-                            datatime.add("0"+String.format("%d", a));
+                            datatime.add("0"+String.format(Locale.getDefault(),"%d", a));
                         }else{
-                            datatime.add(String.format("%d", a));
+                            datatime.add(String.format(Locale.getDefault(),"%d", a));
                         }
                     }
                     break;
@@ -107,9 +108,9 @@ public class TimePickerView extends ListView implements OnItemClickListener, OnD
                 case "HOUR":
                     for (int a = 0; a <= 23; a++) {
                         if(a<10){
-                            datatime.add("0"+String.format("%d", a));
+                            datatime.add("0"+String.format(Locale.getDefault(),"%d", a));
                         }else{
-                            datatime.add(String.format("%d", a));
+                            datatime.add(String.format(Locale.getDefault(),"%d", a));
                         }
 
                     }
@@ -117,18 +118,18 @@ public class TimePickerView extends ListView implements OnItemClickListener, OnD
                 case "MINUTE":
                     for (int a = 0; a <= 59; a++) {
                         if(a<10){
-                            datatime.add("0"+String.format("%d", a));
+                            datatime.add("0"+String.format(Locale.getDefault(),"%d", a));
                         }else{
-                            datatime.add(String.format("%d", a));
+                            datatime.add(String.format(Locale.getDefault(),"%d", a));
                         }
                     }
                     break;
                 case "SECOND":
                     for (int a = 0; a <= 59; a++) {
                         if(a<10){
-                            datatime.add("0"+String.format("%d", a));
+                            datatime.add("0"+String.format(Locale.getDefault(),"%d", a));
                         }else{
-                            datatime.add(String.format("%d", a));
+                            datatime.add(String.format(Locale.getDefault(),"%d", a));
                         }
                     }
                     break;
@@ -176,7 +177,7 @@ public class TimePickerView extends ListView implements OnItemClickListener, OnD
             v.setAccentColor(mController.getAccentColor(), mController.isThemeDark());
             v.requestLayout();
             int time = getTimeFromTextView(v);
-            Log.e("isi time","isi"+time);
+           // Log.e("isi time","isi"+time);
             boolean selected=false;
             switch (typeControl.toUpperCase()){
                 case "HOUR":
