@@ -24,7 +24,7 @@
     android:background="@color/mdtp_accent_color"
     android:gravity="center|center_vertical"
     android:orientation="vertical">
-    <com.kenmeidearu.materialdatetimepicker.AccessibleTextView
+    <com.kenmeidearu.datetimepicker.AccessibleTextView
         android:id="@+id/date_picker_day"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
         android:textSize="@dimen/mdtp_selected_date_day_size"
         android:clickable="true"
         tools:text="22" />
-    <com.kenmeidearu.materialdatetimepicker.AccessibleLinearLayout
+    <com.kenmeidearu.datetimepicker.AccessibleLinearLayout
         android:id="@+id/date_picker_month_and_year"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -68,7 +68,7 @@
             android:textColor="@color/mdtp_date_picker_selector"
             android:textSize="@dimen/mdtp_selected_date_year_size"
             tools:text="2016"/>
-    </com.kenmeidearu.materialdatetimepicker.AccessibleLinearLayout>
+    </com.kenmeidearu.datetimepicker.AccessibleLinearLayout>
     <include
 
         layout="@layout/mdtp_time_header_label"

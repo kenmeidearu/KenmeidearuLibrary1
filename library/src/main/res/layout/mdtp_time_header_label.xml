@@ -52,7 +52,7 @@
         android:layout_marginRight="@dimen/mdtp_extra_time_label_margin"
         android:clipChildren="false">
 
-        <com.kenmeidearu.materialdatetimepicker.AccessibleTextView
+        <com.kenmeidearu.datetimepicker.AccessibleTextView
             android:id="@+id/hours"
             style="@style/mdtp_time_label"
             android:layout_width="wrap_content"
